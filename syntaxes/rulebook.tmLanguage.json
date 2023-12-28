@@ -1,0 +1,63 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Rulebook",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#constant"
+		},
+		{
+			"include": "#number"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#type"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.rulebook",
+				"match": "\\b(if|while|for|return|action|actions|act|fun|ent|else|subaction|let|import|enum)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.rulebook",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.rulebook",
+					"match": "\\\\."
+				}
+			]
+		},
+        "constant": {
+			"match": "\\b(?:true|false)\\b",
+			"name": "constant.language.rulebook"
+		},
+		"number": {
+            "match": "(?x)        # turn on extended mode\n  -?        # an optional minus\n  (?:\n    0       # a zero\n    |       # ...or...\n    [1-9]   # a 1-9 character\n    \\d*     # followed by zero or more digits\n  )\n  (?:\n    (?:\n      \\.    # a period\n      \\d+   # followed by one or more digits\n    )?\n    (?:\n      [eE]  # an e character\n      [+-]? # followed by an option +/-\n      \\d+   # followed by one or more digits\n    )?      # make exponent optional\n  )?        # make decimal portion optional",
+
+			"name": "constant.numeric.rulebook"
+		},
+		"comments": {
+            "match": "#.*" ,
+			"name": "string.comments.rulebook"
+		},
+		"type": {
+            "match": "[A-Z][a-z]*" ,
+			"name": "entity.name.type.rulebook"
+		}
+
+
+	},
+	"scopeName": "source.rl"
+}

@@ -1,0 +1,26 @@
+{
+  "name": "rl-language",
+  "displayName": "rl-language",
+  "description": "rl language support",
+  "repository": "https://github.com/drblallo/rl-vscode-syntax",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "rulebook",
+      "aliases": ["Rulebook", "rulebook"],
+      "extensions": [".rl"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "rulebook",
+      "scopeName": "source.rl",
+      "path": "./syntaxes/rulebook.tmLanguage.json"
+    }]
+  }
+}
