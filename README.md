@@ -1,7 +1,7 @@
 ## Installation
 
 ```
-git clone git@github.com:drblallo/rl-vscode-syntax.git
+git clone git@github.com:rl-language/rl-vscode-syntax.git
 cd rl-vscode-syntax
 npm install
 npx @vscode/vsce package
