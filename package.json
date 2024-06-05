@@ -1,5 +1,6 @@
 {
   "name": "rl-language",
+  "publisher": "rulebooklanguage",
   "displayName": "rl-language",
   "description": "rl language support",
   "repository": "https://github.com/drblallo/rl-vscode-syntax",
